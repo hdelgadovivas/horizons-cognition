@@ -15,19 +15,33 @@
   <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
   <link href="./css/horizons.min.css" rel="stylesheet" type="text/css">
 
-  <!-- Load official jsPsych plugins -->
-  <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.3"></script>
-  <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
-  <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.2"></script>
-  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+  <!-- Load official jsPsych plugins --><script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.3"></script>
+<script>
+  window.jsPsychInstructions = jsPsychInstructions;
+</script>
+
+<script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
+<script>
+  window.jsPsychPreload = jsPsychPreload;
+</script>
+
+<script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.2"></script>
+<script>
+  window.jsPsychFullscreen = jsPsychFullscreen;
+</script>
+
+<script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+<script>
+  window.jsPsychHtmlKeyboardResponse = jsPsychHtmlKeyboardResponse;
+</script>
 
   <!-- Recreate legacy global plugin names -->
   <script>
-    window.jsPsychInstructions = jsPsych.plugins["instructions"];
-    window.jsPsychPreload = jsPsych.plugins["preload"];
-    window.jsPsychFullscreen = jsPsych.plugins["fullscreen"];
-    window.jsPsychHtmlKeyboardResponse = jsPsych.plugins["html-keyboard-response"];
-  </script>
+  var jsPsychInstructions = window.jsPsychInstructions;
+  var jsPsychPreload = window.jsPsychPreload;
+  var jsPsychFullscreen = window.jsPsychFullscreen;
+  var jsPsychHtmlKeyboardResponse = window.jsPsychHtmlKeyboardResponse;
+</script>
 
   <!-- Initialize jsPsych -->
   <script src="./js/init-jspsych.js"></script>
