@@ -3,30 +3,36 @@
 <head>
   <title>Horizons Task</title>
 
-  <!-- Load libraries -->
+  <!-- Load jsPsych core -->
   <script src="https://unpkg.com/jspsych@7.3.3"></script>
 
-  <!-- Initialize jsPsych -->
-  <script src="./js/init-jspsych.js"></script>
+  <!-- Load CSS styles -->
+  <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
+  <link href="./css/horizons.min.css" rel="stylesheet" type="text/css">
 
-  <!-- Load jsPsych plug-ins -->
-  <script src="./js/plugin-horizons-trial.js"></script>
-  <script src="./js/plugin-horizons-comprehension.js"></script>
+  <!-- Load official jsPsych plugins -->
   <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.3"></script>
   <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
   <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.2"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
 
-  <!-- Load experiment -->
-  <script src="./js/horizons-experiment.js"></script>
+  <!-- Initialize jsPsych -->
+  <script src="./js/init-jspsych.js"></script>
+
+  <!-- Load custom plugins -->
+  <script src="./js/plugin-horizons-trial.js"></script>
+  <script src="./js/plugin-horizons-comprehension.js"></script>
+
+  <!-- Load instructions BEFORE experiment -->
   <script src="./js/horizons-instructions.js"></script>
 
-  <!-- Load CSS styles -->
-  <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
-  <link href="./css/horizons.min.css" rel="stylesheet" type="text/css"></link>
+  <!-- Load experiment LAST -->
+  <script src="./js/horizons-experiment.js"></script>
 
 </head>
+
 <body></body>
+
 <script>
 
   // Define image preloading.
@@ -48,6 +54,7 @@
 
   // Initialize timeline.
   var timeline = [];
+
   timeline = timeline.concat(PRELOAD);
   timeline = timeline.concat(FULLSCREEN);
   timeline = timeline.concat(INSTRUCTIONS_SKIP);
@@ -60,4 +67,5 @@
   jsPsych.run(timeline);
 
 </script>
+
 </html>
