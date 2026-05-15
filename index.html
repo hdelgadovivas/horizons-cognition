@@ -4,8 +4,12 @@
   <title>Horizons Task</title>
 
   <!-- Load jsPsych core -->
-<script src="https://unpkg.com/jspsych@7.3.3/dist/index.browser.js"></script>
+  <script src="https://unpkg.com/jspsych@7.3.3/dist/index.browser.js"></script>
 
+  <!-- Compatibility alias for legacy plugins -->
+  <script>
+    var jsPsychModule = jsPsych;
+  </script>
 
   <!-- Load CSS styles -->
   <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
@@ -17,7 +21,14 @@
   <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.2"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
 
-  
+  <!-- Recreate legacy global plugin names -->
+  <script>
+    window.jsPsychInstructions = jsPsych.plugins["instructions"];
+    window.jsPsychPreload = jsPsych.plugins["preload"];
+    window.jsPsychFullscreen = jsPsych.plugins["fullscreen"];
+    window.jsPsychHtmlKeyboardResponse = jsPsych.plugins["html-keyboard-response"];
+  </script>
+
   <!-- Initialize jsPsych -->
   <script src="./js/init-jspsych.js"></script>
 
