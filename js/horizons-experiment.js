@@ -17,7 +17,7 @@ function sampleReward(mean, sigma) {
 //------------------------------------//
 
 var game_01 = {
-  type: jsPsychHorizonsTrial,
+  type: jsPsychHorizonsTrialPlugin,
   horizon: 5,
   rewards_L: Array(5).fill(1).map(x => sampleReward(60, 8)),
   rewards_R: Array(5).fill(1).map(x => sampleReward(40, 8)),
@@ -25,7 +25,7 @@ var game_01 = {
 }
 
 var game_02 = {
-  type: jsPsychHorizonsTrial,
+  type: jsPsychHorizonsTrialPlugin,
   horizon: 10,
   rewards_L: Array(10).fill(1).map(x => sampleReward(40, 8)),
   rewards_R: Array(10).fill(1).map(x => sampleReward(60, 8)),
@@ -33,7 +33,7 @@ var game_02 = {
 }
 
 var game_03 = {
-  type: jsPsychHorizonsTrial,
+  type: jsPsychHorizonsTrialPlugin,
   horizon: 5,
   rewards_L: Array(5).fill(1).map(x => sampleReward(40, 8)),
   rewards_R: Array(5).fill(1).map(x => sampleReward(50, 8)),
