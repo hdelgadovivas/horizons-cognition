@@ -35,7 +35,7 @@ const style = "width:auto; height:auto; max-width:100%; max-height:75vh;";
 
 // Instructions (part 01)
 var INSTRUCTIONS_01 = {
-  type: jsPsychInstructions,
+  type: jsPsychInstructionsModuleModule,
   pages: [
     `<img src='./img/instructions01.png' style="${style}"></img>`,
     `<img src='./img/instructions02.png' style="${style}"></img>`,
@@ -74,7 +74,7 @@ var PRACTICE_H10 = {
 
 // Instructions (part 02)
 var INSTRUCTIONS_02 = {
-  type: jsPsychInstructions,
+  type: jsPsychInstructionsModuleModule,
   pages: [
     `<img src='./img/instructions11.png' style="${style}"></img>`,
     `<img src='./img/instructions12.png' style="${style}"></img>`,
